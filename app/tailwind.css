@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: 0 0% 4%; /* neutral-950 */
+    --accent: 217, 33%, 17%; /* slate-800 */
+    --muted: 215, 19%, 35%; /* slate-600 */
+
+    --app: 245, 58%, 51%; /* indigo-700 */
+  }
+}

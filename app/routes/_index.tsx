@@ -7,5 +7,5 @@ export const loader = async () => {
 };
 
 export default function Index() {
-  return <></>;
+  return <div className="w-[60%] border"></div>;
 }
