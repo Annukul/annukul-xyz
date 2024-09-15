@@ -5,6 +5,7 @@ import mdx from "@mdx-js/rollup";
 import remarkFrontmatter from "remark-frontmatter";
 import remarkMdxFrontmatter from "remark-mdx-frontmatter";
 import rehypePrettyCode from "rehype-pretty-code";
+import { flatRoutes } from "remix-flat-routes";
 
 export default defineConfig({
   plugins: [
@@ -13,6 +14,11 @@ export default defineConfig({
       remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter],
       rehypePlugins: [rehypePrettyCode],
     }),
-    remix(),
+    remix({
+      ignoredRouteFiles: ["**/*"],
+      routes: async (defineRoutes) => {
+        return flatRoutes("routes", defineRoutes);
+      },
+    }),
   ],
 });
