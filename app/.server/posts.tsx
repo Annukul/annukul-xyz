@@ -18,15 +18,11 @@ export const getPosts = async (): Promise<PostMeta[]> => {
     { eager: true }
   );
 
-  console.log({ modules });
-
   const build = await import("virtual:remix/server-build");
-  console.log({ build: build.routes });
   const posts = Object.entries(modules).map(([file, post]) => {
     let id = file.replace("../", "").replace(/\.mdx$/, "");
     let slug = build.routes["routes/_blog+/blog"].path;
     if (slug === undefined) throw new Error(`No route for ${id}`);
-    // 8278903818
     return {
       slug,
       frontmatter: post.frontmatter,

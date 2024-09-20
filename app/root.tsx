@@ -1,3 +1,4 @@
+import { LinksFunction } from "@remix-run/node";
 import {
   Links,
   LiveReload,
@@ -14,6 +15,13 @@ export const meta: MetaFunction = () => [
   {
     name: "description",
     content: "Software Engineer",
+  },
+];
+
+export const links: LinksFunction = () => [
+  {
+    rel: "stylesheet",
+    href: "https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Gowun+Batang:wght@400;700&display=swap",
   },
 ];
 

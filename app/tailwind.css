@@ -4,10 +4,12 @@
 
 @layer base {
   :root {
-    --primary: 0 0% 4%; /* neutral-950 */
+    --primary: 0 0% 9%; /* 181818 */
     --accent: 217, 33%, 17%; /* slate-800 */
     --muted: 215, 19%, 35%; /* slate-600 */
 
     --app: 245, 58%, 51%; /* indigo-700 */
+    /* Text */
+    --main-t: 215, 20%, 65%; /*#94a3b8 */
   }
 }

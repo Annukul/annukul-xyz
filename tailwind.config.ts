@@ -9,7 +9,8 @@ export default {
         primary: "hsl(var(--primary) / <alpha-value>)",
         accent: "hsl(var(--accent) / <alpha-value>)",
         muted: "hsl(var(--muted) / <alpha-value>)",
-        "app-primary": "hsl(var(--app-primary) / <alpha-value>)",
+        app: "hsl(var(--app) / <alpha-value>)",
+        "main-t": "hsl(var(--main-t) / <alpha-value>)",
       },
     },
     keyframes: {
@@ -25,6 +26,10 @@ export default {
     animation: {
       "accordion-down": "accordion-down 0.2s ease-out",
       "accordion-up": "accordion-up 0.2s ease-out",
+    },
+    fontFamily: {
+      gowunBatang: ["Gowun Batang", "serif"],
+      courier: ["Courier Prime", "monospace"],
     },
   },
   plugins: [require("tailwindcss-animate"), typography],
